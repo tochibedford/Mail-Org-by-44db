@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+    <title>Mail Org by 44db</title>
+</head>
+<body>
+    <div class="app">
+        <nav class="navBar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='mo.png') }}" alt="44logo" class="logoPic">
+            </div>
+            <div class="titleBig">
+                Mail Org by 44db ❤
+            </div>
+            <div class="mainMenu">
+                <li class="menuList">
+                    <ul class="mItem" id="send" onclick="dropShow()">SEND</ul>
+                    <div class="dropShow"><input type="email" id="em" placeholder="e-mail address "></div>
+                    <ul class="mItem" id="save">SAVE</ul>
+                </li>
+            </div>
+        </nav>
+        {%block content%}
+        template
+        {%endblock content%}
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
