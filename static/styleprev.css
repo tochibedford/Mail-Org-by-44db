@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    transition: all 1s;
+    z-index: 0;
+}
+
+input{
+    border-style: none;
+    border-bottom: 1px solid;
+    font-size: 15px;
+}
+
+input:focus{
+    border-style: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+button{
+    color: rgb(236, 35, 136);
+    background-color: white;
+    border: 3px black solid;
+    width: 100%;
+    height: 100%;
+}
+.app .navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 12vh;
+    box-shadow: 0px 0px 10px 1px rgb(97, 97, 97);
+    background-color: rgb(236, 35, 136);
+    z-index: 20;
+}
+
+.navBar .mainMenu .menuList{
+    list-style-type: none;
+}
+
+.navBar .logo{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+.navBar .titleBig{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.navBar .mainMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+}
+
+.navBar .logo .logoPic{
+    object-fit: contain;
+    width: 100%;
+}
+
+.menuList .mItem{
+    display: inline;
+    margin: 0% 5% 0% 5%;
+}
+
+.menuList .mItem:hover{
+    color: white;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.emailSend{
+    float: none;
+    position: absolute;
+    width: 200px;
+    border-radius: 5px;
+    border: 3px rgb(236, 35, 136) solid;
+    right: 14.5%;
+    top: 11%;
+    opacity: 1;
+}
+
+#em{
+    width: 100%;
+    z-index: 0;
+}
+
+.dropShow{
+    float: none;
+    position: absolute;
+    width: 200px;
+    border-radius: 5px;
+    border: 3px rgb(236, 35, 136) solid;
+    right: 14.5%;
+    top: 8%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.body{
+    background-color: rgb(255, 217, 240);
+}
+
+.appi{
+    margin-top: 40px;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 22vw;
+
+}
+
+.indexApp{
+    border-radius: 20px;
+    background-color: blue;
+    width: 56vw;
+    
+}
+
+.right{
+    width: 22vw;
+}
