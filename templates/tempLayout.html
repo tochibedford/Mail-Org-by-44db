@@ -16,7 +16,7 @@
 
 
 <body style="background-color:black; ">
-  
+  <!-- <input type="hidden" name="csrf_token" value={{csrf_token()}}/> -->
 
   <div class="app" >
     <nav class="navBar" >
@@ -27,28 +27,31 @@
       </div>
       <div class="mainMenu" >
         <li class="menuList">
-          <ul class="mItem" id="send" onclick="dropShow()">SEND</ul>
-          <div class="dropShow"><input type="email" id="em" placeholder="e-mail address "></div>
-          <ul class="mItem" id="save">SAVE</ul>
+          {% block menuItems %}
+          <ul class="mItem" id="signIn">SIGN-IN</ul>
+          {% endblock menuItems %}
         </li>
       </div>
     </nav>
     <div >
+      
     
-        <img src={{ url_for('static', filename='white.png') }} class="centered"/>
-        <div class="ABfade-in">
-            <div class="img-wrapper centered2">
-                <img src={{ url_for('static', filename='2.png') }} class="imgIn"/>
-            </div>
-            <div class="button">
-                <div class="leftB"></div>
-                <div class="centerB">
-                    <a class="font2" href="#" style= "text-align: center;">Click to proceed</a>
-                </div>
-                <div class="rightB" ></div>
-            </div>
-        </div>
+      <img src={{ url_for('static', filename='white.png') }} class="centered"/>
+      {% block content %}
+      <div class="ABfade-in">
+          <div class="img-wrapper centered2">
+              <img src={{ url_for('static', filename='2.png') }} class="imgIn"/>
+          </div>
+          <div class="button">
+              <div class="leftB"></div>
+              <div class="centerB">
+                  <a class="font2" href="/use" style= "text-align: center;">Click to proceed</a>
+              </div>
+              <div class="rightB" ></div>
+          </div>
       </div>
+      {% endblock content %}
+    </div>
 
     <!-- <div class="appi" >
       <div class="left">

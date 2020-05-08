@@ -4,7 +4,7 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
-    transition: all 1s;
+    transition: all 0.7s;
     z-index: 0;
 }
 
@@ -137,11 +137,82 @@ button{
 
 .appi{
     margin-top: 40px;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
+
 }
 
+.lefta{
+    width: 30vw;
+}
+
+.indexApp{
+    width: 40vw;
+    background-image: linear-gradient( rgba(89, 227, 252, 0.219), rgba(225, 178, 252, 0.11));
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.137);
+    color: rgba(255, 255, 255, 0.699);
+    border-radius: 7px;
+    padding: 20px;
+    transition: box-shadow 0s;
+
+}
+
+.righta{
+    width: 30vw;
+}
+label{
+    font-size: 1.5em;
+}
+
+.check{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 30px;
+}
+
+.topStuff{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: right;
+}
+
+.buttonStuff{
+    text-align: right;
+    margin-right: 50%;
+    transform: translateX(25%);
+}
+
+.indexApp::after{
+    margin-top: 20px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 70%;
+    border-color: rgba(255, 255, 255, 0.342);
+    border-style: inset;
+    border-width: 2px;
+    border-radius: 3px;
+}
+/* .stats{
+    border-style: inset;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 50%;
+} */
+
+input#submit{
+    height: 30%;
+    width: 50%;
+    background-image: linear-gradient(rgba(1, 53, 33, 0.445), rgba(2, 85, 110, 0.521));
+    border: solid rgba(2, 85, 110, 0.089) 2px;
+    border-radius: 3px;
+    margin-top: 10px;
+    font-style: oblique;
+    font-weight: bold;
+    color: rgba(12, 12, 12, 0.795);
+}
 .left{
     width: 22vw;
 }
@@ -189,6 +260,7 @@ button{
   text-align: center;
   color: white;
 }
+
 /* .indexApp{
     /* border-radius: 20px; */
     /* background-color:black;
@@ -322,7 +394,7 @@ a {
     height: 100%;
     object-fit: contain;
     transform: scale(1.5);
-    transition: all 0.2s;
+    transition: all 0s;
     z-index: -10;
  }
 

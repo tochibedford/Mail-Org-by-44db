@@ -1,0 +1,39 @@
+{% extends "tempLayout.html" %}
+
+{% block menuItems %}
+<ul class="mItem" id="send" onclick="dropShow()">SEND</ul>
+<div class="dropShow"><input type="email" id="em" placeholder="e-mail address "></div>
+<ul class="mItem" id="save">SAVE</ul>
+{% endblock menuItems %}
+
+{% block content %}
+<div class="appi">
+    <div class="lefta">
+
+    </div>
+    <div class="indexApp">
+        <div class="formStuff">
+            <form action="#" method="post">
+                <div class="topStuff">
+                    {{form.csrf_token()}}
+                    {{form.all_.label}}
+                    {{form.all_(class = "check")}}
+                    {{form.inbox.label}}
+                    {{form.inbox(class = "check")}}
+                    {{form.sent.label}}
+                    {{form.sent(class = "check")}}
+                    {{form.drafts.label}}
+                    {{form.drafts(class = "check")}} <br>
+                </div>
+                <div class="buttonStuff">
+                    {{form.submit}} <br>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="stats">
+            No stats yet
+        </div> -->
+    </div>
+    <div class="righta"></div>
+</div>
+{% endblock content %}

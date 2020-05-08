@@ -1,3 +1,5 @@
+var allField = document.querySelectorAll(".check")
+var appp = document.querySelector(".indexApp");
 var navbar = document.querySelector("nav.navBar");
 var circular44 = document.querySelector("img.imgIn");
 
@@ -6,39 +8,31 @@ var sendOn = false;
 
 window.onscroll = function(){scrollFunct()};
 
-const startX44 = circular44.x;
-const startY44 = circular44.y;
-var maxMove = 5;
-var addIntoX;
-var addIntoY;
-window.addEventListener("mousemove", function(e){
-    
-    // if (circular44.x + e.movementX >= startX44+maxMove){
-    //     false
-    //     // circular44.style.left = addIntoX.toString()+"px";
-    // }
-    // if(circular44.y + e.movementY >= startY44+maxMove){
-    //     false
-    //     // circular44.style.left = addIntoX.toString()+"px";
-    // }
-    // if (circular44.x - e.movementX <= startX44-maxMove){
-    //     false
-    //     // circular44.style.left = addIntoX.toString()+"px";
-    // }
-    // if(circular44.y - e.movementY <= startY44-maxMove){
-    //     false
-    //     // circular44.style.left = addIntoX.toString()+"px";
-    // }
-    // else{
-        // circular44.style.left = (e.x-circular44.x).toString()+"px";
-        // circular44.style.top = (e.y-circular44.y).toString()+"px";
-        circular44.style.left = e.movementX*1.2.toString()+"px";
-        circular44.style.top = e.movementY*1.2.toString()+"px";
+if (circular44){
+    const startX44 = circular44.x;
+    const startY44 = circular44.y;
+    var maxMove = 5;
+    var addIntoX;
+    var addIntoY;
+    document.onmousemove = function(){
+        var x = -((event.clientX * 100 / window.innerWidth)-50)/5 + "%";
+        var y = -((event.clientY * 100 / window.innerHeight)-50)/5 + "%";
+        circular44.style.left = x;
+        circular44.style.top = y;
 
-        console.log(e.movementX.toString()+"px", e.movementY.toString()+"px")
-    // }
-});
-
+    }
+}else if(appp){
+    const startX44 = appp.x;
+    const startY44 = appp.y;
+    var maxMove = 5;
+    var addIntoX;
+    var addIntoY;
+    document.onmousemove = function(){
+        var x = -((event.clientX * 100 / window.innerWidth)-50)/2;
+        var y = -((event.clientY * 100 / window.innerHeight)-50)/2;
+        appp.style.boxShadow = x + "px " + y + "px " + "20px 5px  rgba(255, 255, 255, 0.137)";
+    };
+}
 
 
 function scrollFunct(){
@@ -62,3 +56,16 @@ function dropShow(){
         sendOn = false;
     }
 };
+
+if(allField[0]){
+    allField[0].addEventListener("click", function(){
+        allField.forEach(function(item, index){
+            if(allField[0].checked == true){
+                item.checked = true;
+            }else{
+                item.checked = false
+            }
+            
+        })
+    })
+}
